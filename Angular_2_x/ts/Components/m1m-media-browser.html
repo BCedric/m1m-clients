@@ -1,3 +1,54 @@
+<<<<<<< HEAD
+<section>
+    <header>
+
+
+      <paper-toolbar>
+      <paper-tabs id="plain-tabs" no-bar>
+
+          <paper-tab (click)="browseMediaServer(null)">Servers</paper-tab>
+
+          <paper-tab *ngIf="ms" (click)="browseMediaServer(ms)">{{ms.name}}</paper-tab>
+          <paper-tab *ngFor="let dir of breadcrumb"
+             (click)="browse(dir)">
+             {{dir.name}}</paper-tab>
+
+        </paper-tabs>
+      </paper-toolbar>
+    </header>
+    <section>
+        <section *ngIf="!ms">
+            <paper-item *ngFor="let server of devices" (click)="browseMediaServer(server)" style="border:1px solid #DDD">
+                {{server.name }}
+            </paper-item>
+        </section>
+        <section *ngIf="ms && data" style="border:1px solid #DDD">
+          <div *ngIf="data.directories.length != 0">
+            <h3>Directories:</h3>
+            <paper-item class="paper-item-link" *ngFor="let dir of data.directories"
+               (click)="browse(dir)"
+               class="dir">
+                {{dir.name}}
+            </paper-item>
+          </div>
+          <div *ngIf="data.medias.length != 0">
+            <h3>Medias:</h3>
+            <paper-listbox class="medias">
+                <paper-item style="cursor:move" *ngFor="let media of data.medias"
+                   [alx-draggable]="media"
+                >
+                <td>
+                  {{ media.title }}  {{ media.creator }} — {{media.duration}}
+                </td>
+                <td class="media-duration">
+                  <!-- {{ duration }} -->
+
+                </td>
+              </paper-item>
+            </paper-listbox>
+          </div>
+        </section>
+=======
 <section class="media-server">
   <!-- le header contient un fil d'ariane ("breadcrumb") -->
     <header class="server-breadcrumb">
@@ -21,6 +72,7 @@
         <p *ngFor="let server of devices" (click)="browseMediaServer(server)" class="server">
                 • {{server.name }}
         </p>
+>>>>>>> 03fc455ac80bfaf67ab0fb068082e9782c2004c2
     </section>
 
     <!-- cette section affiche le contenu des serveurs : des dossiers (directories) ou des médias (medias) -->

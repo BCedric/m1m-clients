@@ -17,9 +17,20 @@ import {PolymerElement}             from "@vaadin/angular2-polymer";
 @NgModule({
     imports     : [ CommonModule, FormsModule, HttpModule, DragDropModule],
     exports     : [ CompMultimediaManager ],
-    declarations: [ CompMultimediaManager, M1mMediaBrowser, M1mMediaRenderer, PolymerElement("paper-slider") ],
+    declarations: [
+      CompMultimediaManager,
+      M1mMediaBrowser,
+      M1mMediaRenderer,
+      PolymerElement("paper-slider"),
+      PolymerElement("paper-header-panel"),
+      PolymerElement("paper-toolbar"),
+      PolymerElement("paper-button"),
+      PolymerElement("paper-listbox"),
+      PolymerElement("paper-item"),
+      PolymerElement("paper-tabs"),
+      PolymerElement("paper-tab"),
+    ],
     providers   : [ CommService ],
     schemas     : [ CUSTOM_ELEMENTS_SCHEMA  ]
 })
 export class M1mMultimediaModule {}
-

@@ -21,10 +21,18 @@
 <!-- nf est l'objet media lu par le renderer. pour connaître les informations accessibles, regardez le json tracé dans le renderer -->
 <p>• {{nf.name}}</p>
 
+<<<<<<< HEAD
+    <section>
+      <paper-button *ngIf="!isPlaying() && currentMedia" (click)="play ()" raised>play</paper-button>
+      <paper-button *ngIf="!isPlaying()" (click)="play ()" raised disabled>play</paper-button>
+        <paper-button *ngIf=" isPlaying()" (click)="pause()" raised>pause</paper-button>
+        <paper-button *ngIf="!isStopped()" (click)="stop ()" raised>stop</paper-button>
+=======
     <section class="media-controls">
         <button *ngIf="!isPlaying()" (click)="play ();">play</button>
         <button *ngIf=" isPlaying()" (click)="pause()">pause</button>
         <button *ngIf="!isStopped()" (click)="stop ()">stop</button>
+>>>>>>> 03fc455ac80bfaf67ab0fb068082e9782c2004c2
     </section>
 
     <section class="volume">
