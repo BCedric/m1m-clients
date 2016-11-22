@@ -29,6 +29,8 @@ import {PolymerElement}             from "@vaadin/angular2-polymer";
       PolymerElement("paper-item"),
       PolymerElement("paper-tabs"),
       PolymerElement("paper-tab"),
+      PolymerElement("paper-card"),
+      PolymerElement("paper-spinner"),
     ],
     providers   : [ CommService ],
     schemas     : [ CUSTOM_ELEMENTS_SCHEMA  ]

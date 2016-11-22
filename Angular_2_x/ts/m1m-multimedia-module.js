@@ -63,6 +63,8 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular
                         angular2_polymer_1.PolymerElement("paper-item"),
                         angular2_polymer_1.PolymerElement("paper-tabs"),
                         angular2_polymer_1.PolymerElement("paper-tab"),
+                        angular2_polymer_1.PolymerElement("paper-card"),
+                        angular2_polymer_1.PolymerElement("paper-spinner"),
                     ],
                     providers: [CommService_1.CommService],
                     schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]
