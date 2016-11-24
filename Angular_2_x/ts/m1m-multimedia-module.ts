@@ -31,6 +31,7 @@ import {PolymerElement}             from "@vaadin/angular2-polymer";
       PolymerElement("paper-tab"),
       PolymerElement("paper-card"),
       PolymerElement("paper-spinner"),
+      PolymerElement("paper-drawer-panel"),
     ],
     providers   : [ CommService ],
     schemas     : [ CUSTOM_ELEMENTS_SCHEMA  ]

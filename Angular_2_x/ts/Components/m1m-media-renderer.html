@@ -9,13 +9,14 @@
          [class.playing]="isPlaying()"
          #rootSection
 >
-<paper-card *ngIf="currentMedia" heading = "{{nf.name}}" image="{{currentMedia.albumarturi}}">
-  <div>
-    <paper-button *ngIf="!isPlaying() && currentMedia" (click)="play ()" raised>play</paper-button>
-    <paper-button *ngIf="!currentMedia || isPlaying()" raised disabled>play</paper-button>
-    <paper-button *ngIf=" isPlaying()" (click)="pause()" raised>pause</paper-button>
-    <paper-button *ngIf=" !isPlaying()"  raised disabled>pause</paper-button>
-    <paper-button *ngIf="!isStopped()" (click)="stop ()" raised>stop</paper-button>
+<paper-card  [image] = "setImage()">
+  <div class="card-header">
+    <h3>{{nf.name}}</h3>
+  </div>
+  <div class="card-controls">
+    <paper-button raised (click)="play()" [disabled] = "!currentMedia || isPlaying()">play</paper-button>
+    <paper-button (click) = "pause()" raised [disabled] = "!isPlaying()">pause</paper-button>
+    <paper-button  (click)="stop ()" raised [disabled] = "isStopped()">stop</paper-button>
   </div>
   <section class="volume">
     <!-- paper-slider est une extension permettant de créer un… slider. Il peut être stylé en CSS -->
@@ -26,7 +27,7 @@
               (ngModelChange) = "setVolume($event)"
       ></paper-slider>
   </section>
-  <div class="card-content">
+  <div *ngIf="currentMedia" class="card-content">
     <div class="card-music" *ngIf="currentMedia.classe == 'object.item.audioItem.musicTrack'">
       <div class="media-title">{{currentMedia.title}}</div>
       <div class="media-creator">{{currentMedia.creator}}</div>
@@ -53,11 +54,11 @@
 
 
     <!-- Cette section comporte des infos complémentaires sur le media en cours de lecture. Il affiche la durée du média, l'image si elle est dispo, et le json complet des métadonnées du media -->
- <section *ngIf="currentMedia">
+ <!--<section *ngIf="currentMedia">
         Duration: {{currentMedia.duration}}<br />
         <img src="{{ currentMedia.abumarturi }}" style="max-width:100px" /><br/>
         currentMedia object:<br />
         <code>{{currentMedia | json}}</code>
-    </section>
+    </section>-->
 
 </section>

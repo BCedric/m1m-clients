@@ -29,7 +29,7 @@
             "@polymer": "npm:@polymer",
             "@vaadin/angular2-polymer": "npm:@vaadin/angular2-polymer",
             "hammerjs": "npm:hammerjs",
-            "alx-dragdrop/DragDropModule": "npm:alx-dragdrop"
+            "alx-dragdrop/DragDropModule": "npm:alx-dragdrop",
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {

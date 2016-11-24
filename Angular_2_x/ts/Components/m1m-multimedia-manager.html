@@ -1,21 +1,29 @@
 <!-- <h1>{{title}}</h1> -->
-<paper-header-panel>
-  <paper-toolbar>
-    <h2>Media Servers</h2>
-  </paper-toolbar>
-</paper-header-panel>
-<m1m-media-browser [devices]="mediaServers"></m1m-media-browser>
+<paper-drawer-panel right-drawer drawer-width = "300px"  disable-swipe>
+  <div drawer>
+    <paper-header-panel>
+      <paper-toolbar>
+        <h2>Media Renderers</h2>
+      </paper-toolbar>
+      <section class="m1m-media-renderer-container">
+          <m1m-media-renderer
+                  *ngFor="let renderer of mediaRenderers"
+                  [nf]="renderer"
+          >
+          </m1m-media-renderer>
+      </section>
+    </paper-header-panel>
+  </div>
 
-<hr>
-<paper-header-panel>
-  <paper-toolbar>
-    <h2>Media Renderers</h2>
-  </paper-toolbar>
-</paper-header-panel>
-<section class="m1m-media-renderer-container">
-    <m1m-media-renderer
-            *ngFor="let renderer of mediaRenderers"
-            [nf]="renderer"
-    >
-    </m1m-media-renderer>
-</section>
+  <div main>
+    <paper-header-panel>
+      <paper-toolbar>
+
+        <h2>Media Servers</h2>
+
+      </paper-toolbar>
+      
+      <m1m-media-browser [devices]="mediaServers"></m1m-media-browser>
+    </paper-header-panel>
+  </div>
+</paper-drawer-panel>

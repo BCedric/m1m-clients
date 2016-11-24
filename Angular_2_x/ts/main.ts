@@ -11,7 +11,7 @@ import { DragDropModule } 			from "alx-dragdrop/DragDropModule";
 
 @Component({
 	selector	: "root-manager",
-	template	: `<comp-multimedia-manager title="Gestion des services UPnP/DLNA" 
+	template	: `<comp-multimedia-manager title="Gestion des services UPnP/DLNA"
 											alx-dragdrop></comp-multimedia-manager>
 				  `
 })
