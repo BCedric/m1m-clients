@@ -126,6 +126,8 @@ System.register(["@angular/core", "../Services/CommService", "hammerjs"], functi
                         return false;
                     if (this.currentMedia.albumarturi !== "")
                         return this.currentMedia.albumarturi;
+                    if (this.currentMedia.classe == "object.item.videoItem")
+                        return "img/Film-photo.jpg";
                     else
                         return "img/images.png";
                 }

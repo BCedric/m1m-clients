@@ -32,6 +32,8 @@ import {PolymerElement}             from "@vaadin/angular2-polymer";
       PolymerElement("paper-card"),
       PolymerElement("paper-spinner"),
       PolymerElement("paper-drawer-panel"),
+      PolymerElement("paper-input"),
+    //  PolymerElement("iron-icons"),
     ],
     providers   : [ CommService ],
     schemas     : [ CUSTOM_ELEMENTS_SCHEMA  ]

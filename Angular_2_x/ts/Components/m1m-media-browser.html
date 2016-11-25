@@ -11,6 +11,10 @@
              {{dir.name}}</paper-tab>
 
         </paper-tabs>
+        <!--<paper-input label="search" icon = "icons:search"></paper-input>-->
+        <paper-input class = "search" label="search" [ngModel] = "searchField" (ngModelChange) = "search($event)" position = "right">
+          <iron-icon icon="search" prefix></iron-icon>
+        </paper-input>
       </paper-toolbar>
     </header>
 
@@ -23,18 +27,18 @@
             </paper-item>
         </section>
         <section *ngIf="ms && data" style="border:1px solid #DDD">
-          <div *ngIf="data.directories.length != 0">
+          <div *ngIf="data.directories.filter(filterDirectoryActive).length != 0">
             <h3>Directories:</h3>
-            <paper-item class="paper-item-link" *ngFor="let dir of data.directories"
-               (click)="browse(dir)"
+            <paper-item class="paper-item-link" *ngFor="let dir of data.directories.filter(filterDirectoryActive)"
+               (click)="browse(dir);"
                class="dir">
                 {{dir.name}}
             </paper-item>
           </div>
-          <div *ngIf="data.medias.length != 0">
+          <div *ngIf="data.medias.filter(filterMediaActive).length != 0">
             <h3>Medias:</h3>
             <paper-listbox class="medias">
-                <paper-item style="cursor:move" *ngFor="let media of data.medias"
+                <paper-item style="cursor:move" *ngFor="let media of data.medias.filter(filterMediaActive)"
                    [alx-draggable]="media"
                 >
                 <td>
