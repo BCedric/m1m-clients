@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" media="all" href="m1m-media-browser.css" is="custom-style">
 <section >
-    <header id="awesomePart">
+    <header id="breadcrumbId">
       <paper-toolbar class="breadcrumbBar">
       <paper-tabs id="plain-tabs" no-bar>
 
@@ -25,25 +25,32 @@
         <section *ngIf="!ms">
 
             <paper-item *ngFor="let server of devices" (click)="browseMediaServer(server)" style="border:1px solid #DDD">
+              <img class="imgItem" src="img/server.png" alt="" />
                 {{server.name }}
             </paper-item>
         </section>
         <section *ngIf="ms && data" style="border:1px solid #DDD">
           <div *ngIf="data.directories.filter(filterDirectoryActive).length != 0">
-            <h3>Directories:</h3>
-            <paper-item  class="paper-item-link" *ngFor="let dir of data.directories.filter(filterDirectoryActive)"
-               (click)="browse(dir);"
-               class="dir">
-                {{dir.name}}
-            </paper-item>
+
+            <span *ngFor="let dir of data.directories.filter(filterDirectoryActive)">
+              <paper-item  class="paper-item-link"
+                 (click)="browse(dir);"
+                 class="dir">
+                 <img class="imgItem" src="img/folder.png" alt="" />
+                  {{dir.name}}
+              </paper-item>
+            </span>
+
           </div>
           <div *ngIf="data.medias.filter(filterMediaActive).length != 0">
-            <h3>Medias:</h3>
+
             <paper-listbox class="medias">
                 <paper-item style="cursor:move" *ngFor="let media of data.medias.filter(filterMediaActive)"
                    [alx-draggable]="media"
                 >
                 <td>
+                  <img *ngIf="media.classe == 'object.item.audioItem.musicTrack'" class="imgItem" src="img/music.png" alt="" />
+                  <img *ngIf="media.classe == 'object.item.videoItem'" class="imgItem" src="img/video.png" alt="" />
                   {{ media.title }}
                 </td>
 
@@ -52,4 +59,4 @@
           </div>
 
         </section>
-        <a simplePageScroll href="#awesomePart"></a>
+        <a class="upArrow" simplePageScroll href="#breadcrumbId"></a>

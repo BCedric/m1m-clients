@@ -8,14 +8,19 @@ paper-toolbar.breadcrumbBar{
   background-color: #E8811D;
 }
 
-a {
+a.upArrow {
   display: block;
   background-image: url("img/upArrow.png");
-  background-size: 60px 50px;
+  background-size: 60px 60px;
   background-repeat: no-repeat;
   width: 60px;
-  height: 50px;
+  height: 60px;
   position: fixed;
   right: 320px;
   bottom: 10px;
+}
+
+img.imgItem{
+  width: 20px;
+  margin-right: 5px;
 }
