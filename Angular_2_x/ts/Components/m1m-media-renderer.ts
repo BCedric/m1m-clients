@@ -140,11 +140,11 @@ export class M1mMediaRenderer implements OnInit {
         });
     }
 
-    setImage() {
+    setImage() : boolean | string {
       if(!this.currentMedia) return false;
       if(this.currentMedia.albumarturi !=="") return this.currentMedia.albumarturi;
-      if(this.currentMedia.classe == "object.item.videoItem") return "img/Film-photo.jpg";
-      else return "img/images.png";
+      if(this.currentMedia.classe === "object.item.videoItem") return "img/Film-photo.jpg";
+      return "img/images.png";
 
     }
 }

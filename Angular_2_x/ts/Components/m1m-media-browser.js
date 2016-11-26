@@ -27,10 +27,10 @@ System.register(["@angular/core", "../Services/CommService"], function (exports_
                     this.breadcrumb = [];
                     this.searchField = "";
                     this.filterMediaAll = (m) => true;
-                    this.filterMediaSearch = (m) => m.title.toLowerCase().indexOf(this.searchField) != -1;
+                    this.filterMediaSearch = (m) => m.title.toLowerCase().indexOf(this.searchField.toLowerCase()) !== -1;
                     this.filterMediaActive = this.filterMediaAll;
                     this.filterDirectoryAll = (d) => true;
-                    this.filterDirectorySearch = (d) => d.name.toLowerCase().indexOf(this.searchField) != -1;
+                    this.filterDirectorySearch = (d) => d.name.toLowerCase().indexOf(this.searchField.toLowerCase()) !== -1;
                     this.filterDirectoryActive = this.filterDirectoryAll;
                     // console.log( "CommService:", cs);
                 }

@@ -1,6 +1,8 @@
-<section>
-    <header>
-      <paper-toolbar>
+
+<link rel="stylesheet" media="all" href="m1m-media-browser.css" is="custom-style">
+<section >
+    <header id="awesomePart">
+      <paper-toolbar class="breadcrumbBar">
       <paper-tabs id="plain-tabs" no-bar>
 
           <paper-tab (click)="browseMediaServer(null)">Servers</paper-tab>
@@ -29,7 +31,7 @@
         <section *ngIf="ms && data" style="border:1px solid #DDD">
           <div *ngIf="data.directories.filter(filterDirectoryActive).length != 0">
             <h3>Directories:</h3>
-            <paper-item class="paper-item-link" *ngFor="let dir of data.directories.filter(filterDirectoryActive)"
+            <paper-item  class="paper-item-link" *ngFor="let dir of data.directories.filter(filterDirectoryActive)"
                (click)="browse(dir);"
                class="dir">
                 {{dir.name}}
@@ -48,4 +50,6 @@
               </paper-item>
             </paper-listbox>
           </div>
+
         </section>
+        <a simplePageScroll href="#awesomePart"></a>

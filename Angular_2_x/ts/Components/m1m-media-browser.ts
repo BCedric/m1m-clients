@@ -20,13 +20,12 @@ export class M1mMediaBrowser {
     private searchField      : string = "";
 
     filterMediaAll : filterMedia = (m) => true;
-    filterMediaSearch : filterMedia = (m) =>  m.title.toLowerCase().indexOf(this.searchField) != -1;
+    filterMediaSearch : filterMedia = (m) =>  m.title.toLowerCase().indexOf(this.searchField.toLowerCase()) !== -1;
     filterMediaActive : filterMedia = this.filterMediaAll;
 
     filterDirectoryAll : filterDirectory = (d) => true;
-    filterDirectorySearch : filterDirectory = (d) =>  d.name.toLowerCase().indexOf(this.searchField) != -1;
+    filterDirectorySearch : filterDirectory = (d) =>  d.name.toLowerCase().indexOf(this.searchField.toLowerCase()) !== -1;
     filterDirectoryActive : filterDirectory = this.filterDirectoryAll;
-
 
     constructor(private cs: CommService) {
         // console.log( "CommService:", cs);
@@ -41,7 +40,7 @@ export class M1mMediaBrowser {
         }
     }
     browse( directory?: Directory ) {
-        this.searchField=""
+        this.searchField="";
         let directoryId: string;
         if(directory) {
             directoryId = directory.directoryId;
@@ -63,8 +62,7 @@ export class M1mMediaBrowser {
       if(str ==="") {
         this.filterMediaActive = this.filterMediaAll;
         this.filterDirectoryActive = this.filterDirectoryAll;
-      }
-      else {
+      } else {
         this.filterMediaActive = this.filterMediaSearch;
         this.filterDirectoryActive = this.filterDirectorySearch;
       }

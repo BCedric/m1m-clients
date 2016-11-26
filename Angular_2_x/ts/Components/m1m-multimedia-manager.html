@@ -2,7 +2,7 @@
 <paper-drawer-panel right-drawer drawer-width = "300px"  disable-swipe>
   <div drawer>
     <paper-header-panel>
-      <paper-toolbar>
+      <paper-toolbar class="mediaBar">
         <h2>Media Renderers</h2>
       </paper-toolbar>
       <section class="m1m-media-renderer-container">
@@ -17,12 +17,12 @@
 
   <div main>
     <paper-header-panel>
-      <paper-toolbar>
+      <paper-toolbar class="serverBar">
 
         <h2>Media Servers</h2>
 
       </paper-toolbar>
-      
+
       <m1m-media-browser [devices]="mediaServers"></m1m-media-browser>
     </paper-header-panel>
   </div>

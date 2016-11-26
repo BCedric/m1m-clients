@@ -3,6 +3,8 @@ import {Component}                  from "@angular/core";
 import { BrowserModule }    		from "@angular/platform-browser";
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } 				from "@angular/core";
 
+import {Ng2PageScrollModule} from "ng2-page-scroll/ng2-page-scroll";
+
 import { M1mMultimediaModule } 		from "./m1m-multimedia-module";
 import { DragDropModule } 			from "alx-dragdrop/DragDropModule";
 
@@ -20,7 +22,7 @@ class RootManager {
 
 //enableProdMode();
 @NgModule({
-	imports     : [ M1mMultimediaModule, BrowserModule, DragDropModule ],
+	imports     : [ M1mMultimediaModule, BrowserModule, DragDropModule, Ng2PageScrollModule.forRoot() ],
 	declarations: [ RootManager,  ],
 	bootstrap   : [ RootManager ],
     schemas     : [ CUSTOM_ELEMENTS_SCHEMA  ]

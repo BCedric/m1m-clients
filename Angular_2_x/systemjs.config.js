@@ -23,6 +23,7 @@
             '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
             '@angular/material': 'npm:@angular/material/material.umd.js',
             // other libraries
+            'ng2-page-scroll/ng2-page-scroll': 'npm:ng2-page-scroll/bundles/ng2-page-scroll.umd.js',
             'rxjs': 'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
             "socket.io-client": "npm:socket.io-client/socket.io.js",
@@ -39,6 +40,7 @@
             "paper-slider": {main: "paper-slider.html"},
             "@vaadin/angular2-polymer": {main: "./index.js", defaultExtension: "js"},
             "hammerjs": {main: "./hammer.min.js", defaultExtension: "js"},
+            "ng2-page-scroll":{ main: "ng2-page-scroll.js",defaultExtension: "js"},
             "alx-dragdrop/DragDropModule": {main: "./DragDropModule.js", defaultExtension: "js"}
         }
     }); // end of System.config
