@@ -1,4 +1,4 @@
-System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular/http", "alx-dragdrop/DragDropModule", "./Components/m1m-multimedia-manager", "./Components/m1m-media-renderer", "./Components/m1m-media-browser", "./Services/CommService", "ng2-page-scroll/ng2-page-scroll", "@vaadin/angular2-polymer"], function (exports_1, context_1) {
+System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular/http", "alx-dragdrop/DragDropModule", "./Components/m1m-multimedia-manager", "./Components/m1m-media-renderer", "./Components/m1m-media-browser", "./Services/CommService", "@vaadin/angular2-polymer"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,7 +10,7 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, common_1, forms_1, http_1, DragDropModule_1, m1m_multimedia_manager_1, m1m_media_renderer_1, m1m_media_browser_1, CommService_1, ng2_page_scroll_1, angular2_polymer_1, M1mMultimediaModule;
+    var core_1, common_1, forms_1, http_1, DragDropModule_1, m1m_multimedia_manager_1, m1m_media_renderer_1, m1m_media_browser_1, CommService_1, angular2_polymer_1, M1mMultimediaModule;
     return {
         setters: [
             function (core_1_1) {
@@ -40,9 +40,6 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular
             function (CommService_1_1) {
                 CommService_1 = CommService_1_1;
             },
-            function (ng2_page_scroll_1_1) {
-                ng2_page_scroll_1 = ng2_page_scroll_1_1;
-            },
             function (angular2_polymer_1_1) {
                 angular2_polymer_1 = angular2_polymer_1_1;
             }
@@ -52,7 +49,7 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular
             };
             M1mMultimediaModule = __decorate([
                 core_1.NgModule({
-                    imports: [common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, DragDropModule_1.DragDropModule, ng2_page_scroll_1.Ng2PageScrollModule.forRoot()],
+                    imports: [common_1.CommonModule, forms_1.FormsModule, http_1.HttpModule, DragDropModule_1.DragDropModule /*, Ng2PageScrollModule.forRoot()*/],
                     exports: [m1m_multimedia_manager_1.CompMultimediaManager],
                     declarations: [
                         m1m_multimedia_manager_1.CompMultimediaManager,
@@ -70,6 +67,7 @@ System.register(["@angular/core", "@angular/common", "@angular/forms", "@angular
                         angular2_polymer_1.PolymerElement("paper-spinner"),
                         angular2_polymer_1.PolymerElement("paper-drawer-panel"),
                         angular2_polymer_1.PolymerElement("paper-input"),
+                        angular2_polymer_1.PolymerElement("iron-media-query"),
                     ],
                     providers: [CommService_1.CommService],
                     schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA]

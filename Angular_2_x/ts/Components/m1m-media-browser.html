@@ -1,5 +1,7 @@
 
 <link rel="stylesheet" media="all" href="m1m-media-browser.css" is="custom-style">
+
+
 <section >
     <header id="breadcrumbId">
       <paper-toolbar class="breadcrumbBar">
@@ -11,12 +13,11 @@
           <paper-tab *ngFor="let dir of breadcrumb"
              (click)="browse(dir)">
              {{dir.name}}</paper-tab>
-
         </paper-tabs>
         <!--<paper-input label="search" icon = "icons:search"></paper-input>-->
-        <paper-input class = "search" label="search" [ngModel] = "searchField" (ngModelChange) = "search($event)" position = "right">
-          <iron-icon icon="search" prefix></iron-icon>
-        </paper-input>
+          <paper-input class = "search" label="search" [ngModel] = "searchField" (ngModelChange) = "search($event)" position = "right">
+            <iron-icon icon="search" prefix></iron-icon>
+          </paper-input>
       </paper-toolbar>
     </header>
 

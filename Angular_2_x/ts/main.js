@@ -1,4 +1,4 @@
-System.register(["@angular/platform-browser-dynamic", "@angular/core", "@angular/platform-browser", "ng2-page-scroll/ng2-page-scroll", "./m1m-multimedia-module", "alx-dragdrop/DragDropModule"], function (exports_1, context_1) {
+System.register(["@angular/platform-browser-dynamic", "@angular/core", "@angular/platform-browser", "./m1m-multimedia-module", "alx-dragdrop/DragDropModule"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10,7 +10,7 @@ System.register(["@angular/platform-browser-dynamic", "@angular/core", "@angular
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var __moduleName = context_1 && context_1.id;
-    var platform_browser_dynamic_1, core_1, platform_browser_1, core_2, ng2_page_scroll_1, m1m_multimedia_module_1, DragDropModule_1, RootManager, AppModule;
+    var platform_browser_dynamic_1, core_1, platform_browser_1, core_2, m1m_multimedia_module_1, DragDropModule_1, RootManager, AppModule;
     return {
         setters: [
             function (platform_browser_dynamic_1_1) {
@@ -22,9 +22,6 @@ System.register(["@angular/platform-browser-dynamic", "@angular/core", "@angular
             },
             function (platform_browser_1_1) {
                 platform_browser_1 = platform_browser_1_1;
-            },
-            function (ng2_page_scroll_1_1) {
-                ng2_page_scroll_1 = ng2_page_scroll_1_1;
             },
             function (m1m_multimedia_module_1_1) {
                 m1m_multimedia_module_1 = m1m_multimedia_module_1_1;
@@ -49,7 +46,7 @@ System.register(["@angular/platform-browser-dynamic", "@angular/core", "@angular
             };
             AppModule = __decorate([
                 core_2.NgModule({
-                    imports: [m1m_multimedia_module_1.M1mMultimediaModule, platform_browser_1.BrowserModule, DragDropModule_1.DragDropModule, ng2_page_scroll_1.Ng2PageScrollModule.forRoot()],
+                    imports: [m1m_multimedia_module_1.M1mMultimediaModule, platform_browser_1.BrowserModule, DragDropModule_1.DragDropModule /*, Ng2PageScrollModule.forRoot() */],
                     declarations: [RootManager,],
                     bootstrap: [RootManager],
                     schemas: [core_2.CUSTOM_ELEMENTS_SCHEMA]

@@ -66,5 +66,5 @@ export class M1mMediaBrowser {
         this.filterMediaActive = this.filterMediaSearch;
         this.filterDirectoryActive = this.filterDirectorySearch;
       }
-    }    
+    }
 }

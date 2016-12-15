@@ -10,14 +10,14 @@ import { M1mMediaRenderer }         from "./Components/m1m-media-renderer";
 import { M1mMediaBrowser }          from "./Components/m1m-media-browser";
 import { CommService }              from "./Services/CommService";
 
-import {Ng2PageScrollModule} from "ng2-page-scroll/ng2-page-scroll";
+//import {Ng2PageScrollModule} from "ng2-page-scroll/ng2-page-scroll";
 
 import {PolymerElement}             from "@vaadin/angular2-polymer";
 //import "@polymer/paper-slider";
 
 
 @NgModule({
-    imports     : [ CommonModule, FormsModule, HttpModule, DragDropModule, Ng2PageScrollModule.forRoot()],
+    imports     : [ CommonModule, FormsModule, HttpModule, DragDropModule/*, Ng2PageScrollModule.forRoot()*/],
     exports     : [ CompMultimediaManager ],
     declarations: [
       CompMultimediaManager,
@@ -35,7 +35,7 @@ import {PolymerElement}             from "@vaadin/angular2-polymer";
       PolymerElement("paper-spinner"),
       PolymerElement("paper-drawer-panel"),
       PolymerElement("paper-input"),
-    //  PolymerElement("iron-icons"),
+      PolymerElement("iron-media-query"),
     ],
     providers   : [ CommService ],
     schemas     : [ CUSTOM_ELEMENTS_SCHEMA  ]
